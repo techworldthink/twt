@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - Twt Electronics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass mx-lg-4 mt-lg-3 rounded-pill">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-gradient" href="#">TWT ELECTRONICS</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#products">Store</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Login</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary btn-sm px-4" href="#">Get Started</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="nav-link position-relative p-2 glass rounded-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                id="cart-count">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="mt-4">
+        <div class="container-fluid p-0 mb-5 overflow-hidden">
+            <div class="row g-0 align-items-center position-relative" style="min-height: 70vh;">
+                <div class="col-lg-6 z-index-2 ps-lg-5 py-5 ultra-fade-in">
+                    <div class="container">
+                        <h6 class="text-primary fw-bold text-uppercase mb-3 tracking-widest"
+                            style="letter-spacing: 6px;">
+                            Exclusive Audio Engineering</h6>
+                        <h1 class="display-1 fw-bold mb-4">THE ART OF <br><span class="text-gradient">PURE SOUND</span>
+                        </h1>
+                        <p class="lead text-secondary opacity-75 mb-5 col-lg-10">Experience audio in its most refined
+                            form. Our
+                            handcrafted electronics combine precision engineering with timeless design for the ultimate
+                            high-fidelity journey.</p>
+                        <div class="d-flex gap-4">
+                            <a href="#products" class="btn btn-primary px-5 py-3">View Collections</a>
+                            <a href="#" class="btn btn-outline-light px-5 py-3">Our Craft</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 position-absolute top-0 end-0 h-100 d-none d-lg-block">
+                    <div class="hero-image-overlay"></div>
+                    <img src="images/hero.png" alt="High-end Audio" class="w-100 h-100 object-fit-cover ultra-fade-in"
+                        style="animation-delay: 0.3s">
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5" id="products">
+            <div class="row mb-5 ultra-fade-in" style="animation-delay: 0.5s">
+                <div class="col-12">
+                    <div class="category-scroll">
+                        <span
+                            class="text-secondary small text-uppercase fw-bold opacity-50 pe-2 border-end border-secondary border-opacity-25 filter-directory-label"
+                            style="letter-spacing: 2px;">Directory</span>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-pill px-4 active">All Masterpieces</a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-pill px-4">Amplifiers</a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-pill px-4">Monitors</a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-pill px-4">Accessories</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- Sample Product 1 -->
+                <div class="col-md-6 col-lg-4 ultra-fade-in" style="animation-delay: 0.2s">
+                    <div class="card h-100 p-0">
+                        <div class="product-image-container">
+                            <div
+                                class="bg-black w-100 h-100 d-flex align-items-center justify-content-center text-secondary opacity-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                    class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.895 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                                    <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                                    <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                                </svg>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-4 z-index-2">
+                                <span class="badge badge-premium">Reference Precision</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-4">
+                                <h5 class="card-title fw-bold mb-2 h4 text-gradient">真空管アンプ Reference 1</h5>
+                                <p class="text-secondary small text-uppercase tracking-widest opacity-50">Amplifiers</p>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-secondary small d-block opacity-50 mb-1">Acquire for</span>
+                                    <span class="fs-3 fw-bold text-white">₹45,000.00</span>
+                                </div>
+                                <a href="#"
+                                    class="btn btn-primary rounded-circle p-0 d-flex align-items-center justify-content-center"
+                                    style="width: 56px; height: 56px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 2 -->
+                <div class="col-md-6 col-lg-4 ultra-fade-in" style="animation-delay: 0.4s">
+                    <div class="card h-100 p-0">
+                        <div class="product-image-container">
+                            <div
+                                class="bg-black w-100 h-100 d-flex align-items-center justify-content-center text-secondary opacity-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                    class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.895 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                                    <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                                    <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                                </svg>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-4 z-index-2">
+                                <span class="badge badge-premium">Studio Grade</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-4">
+                                <h5 class="card-title fw-bold mb-2 h4 text-gradient">Omni Monitor X</h5>
+                                <p class="text-secondary small text-uppercase tracking-widest opacity-50">Monitors</p>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-secondary small d-block opacity-50 mb-1">Acquire for</span>
+                                    <span class="fs-3 fw-bold text-white">₹82,000.00</span>
+                                </div>
+                                <a href="#"
+                                    class="btn btn-primary rounded-circle p-0 d-flex align-items-center justify-content-center"
+                                    style="width: 56px; height: 56px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 3 -->
+                <div class="col-md-6 col-lg-4 ultra-fade-in" style="animation-delay: 0.6s">
+                    <div class="card h-100 p-0">
+                        <div class="product-image-container">
+                            <div
+                                class="bg-black w-100 h-100 d-flex align-items-center justify-content-center text-secondary opacity-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                    class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.895 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                                    <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                                    <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                                </svg>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-4 z-index-2">
+                                <span class="badge badge-premium">Silver Series</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-4">
+                                <h5 class="card-title fw-bold mb-2 h4 text-gradient">Pure Silver Cable</h5>
+                                <p class="text-secondary small text-uppercase tracking-widest opacity-50">Accessories
+                                </p>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-secondary small d-block opacity-50 mb-1">Acquire for</span>
+                                    <span class="fs-3 fw-bold text-white">₹12,500.00</span>
+                                </div>
+                                <a href="#"
+                                    class="btn btn-primary rounded-circle p-0 d-flex align-items-center justify-content-center"
+                                    style="width: 56px; height: 56px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 mt-5 glass border-top-0 border-start-0 border-end-0 border-bottom-0">
+        <div class="container text-center">
+            <p class="mb-0 text-secondary small">&copy; 2025 Twt Electronics. Crafted for excellence.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('mt-lg-3', 'mx-lg-4');
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.classList.add('mt-lg-3', 'mx-lg-4');
+            }
+        });
+    </script>
+</body>
+
+</html>
