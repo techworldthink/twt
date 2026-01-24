@@ -19,8 +19,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link px-3" href="#speaker-detail">The Speaker</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#speaker-detail">Specifications</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#speaker-detail">Vintage Stereo</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#bookshelf-detail">Bookshelf Pair</a></li>
                     <li class="nav-item ms-lg-2">
                         <a class="btn btn-primary btn-sm px-4" href="#speaker-detail">Reserve Now</a>
                     </li>
@@ -66,16 +66,19 @@
                         <div class="d-flex gap-3 justify-content-center mt-4">
                             <img src="images/speaker_brown.png" alt="Brown"
                                 class="thumbnail-img rounded-pill border border-2 border-primary"
-                                onclick="changeImage(this)"
+                                onclick="changeGalleryImage(this, 'main-speaker-image', 'thumbnail-img')"
                                 style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
                             <img src="images/speaker_cherry.png" alt="Cherry"
-                                class="thumbnail-img rounded-pill opacity-50" onclick="changeImage(this)"
+                                class="thumbnail-img rounded-pill opacity-50"
+                                onclick="changeGalleryImage(this, 'main-speaker-image', 'thumbnail-img')"
                                 style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
                             <img src="images/speaker_black.png" alt="Black"
-                                class="thumbnail-img rounded-pill opacity-50" onclick="changeImage(this)"
+                                class="thumbnail-img rounded-pill opacity-50"
+                                onclick="changeGalleryImage(this, 'main-speaker-image', 'thumbnail-img')"
                                 style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
                             <img src="images/speaker_white.png" alt="White"
-                                class="thumbnail-img rounded-pill opacity-50" onclick="changeImage(this)"
+                                class="thumbnail-img rounded-pill opacity-50"
+                                onclick="changeGalleryImage(this, 'main-speaker-image', 'thumbnail-img')"
                                 style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
                         </div>
                     </div>
@@ -109,10 +112,78 @@
 
                         <div class="d-flex align-items-center gap-4">
                             <div>
-                                <span class="text-secondary small d-block opacity-50 mb-1">Introductory Price</span>
-                                <span class="display-6 fw-bold text-white">₹24,999</span>
+                                <span class="text-secondary small d-block opacity-50 mb-1">Pricing Information</span>
+                                <span class="fs-4 fw-bold text-white">Coming Soon</span>
                             </div>
-                            <button class="btn btn-primary btn-lg px-5 py-3 flex-grow-1">Add to Collection</button>
+                            <button class="btn btn-primary btn-lg px-5 py-3 flex-grow-1">Notify Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5 border-top border-secondary border-opacity-10" id="bookshelf-detail">
+            <div class="row align-items-center g-5 flex-row-reverse">
+                <div class="col-lg-6 ultra-fade-in">
+                    <div class="card p-0 border-0 bg-transparent overflow-visible">
+                        <img src="images/bookshelf_white.png" alt="Reference Bookshelf Speakers" id="bookshelf-image"
+                            class="img-fluid rounded-4 shadow-lg">
+                        <div class="d-flex gap-3 justify-content-center mt-4">
+                            <img src="images/bookshelf_white.png" alt="White"
+                                class="thumbnail-img-bookshelf rounded-pill border border-2 border-primary"
+                                onclick="changeGalleryImage(this, 'bookshelf-image', 'thumbnail-img-bookshelf')"
+                                style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;">
+                            <img src="images/bookshelf_walnut.jpg" alt="Walnut"
+                                class="thumbnail-img-bookshelf rounded-pill opacity-50"
+                                onclick="changeGalleryImage(this, 'bookshelf-image', 'thumbnail-img-bookshelf')"
+                                style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;">
+                            <img src="images/bookshelf_oak.jpg" alt="Oak"
+                                class="thumbnail-img-bookshelf rounded-pill opacity-50"
+                                onclick="changeGalleryImage(this, 'bookshelf-image', 'thumbnail-img-bookshelf')"
+                                style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;">
+                            <img src="images/bookshelf_black.jpg" alt="Black"
+                                class="thumbnail-img-bookshelf rounded-pill opacity-50"
+                                onclick="changeGalleryImage(this, 'bookshelf-image', 'thumbnail-img-bookshelf')"
+                                style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;">
+                            <img src="images/bookshelf_teak.jpg" alt="Teak"
+                                class="thumbnail-img-bookshelf rounded-pill opacity-50"
+                                onclick="changeGalleryImage(this, 'bookshelf-image', 'thumbnail-img-bookshelf')"
+                                style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ultra-fade-in" style="animation-delay: 0.2s">
+                    <div class="pe-lg-5">
+                        <span class="badge badge-premium mb-3">Hi-Fi Reference</span>
+                        <h2 class="display-5 fw-bold mb-4 text-gradient">TWT Bookshelf Master</h2>
+                        <p class="text-secondary fs-5 mb-5">A precise duo of satellite speakers designed for superior
+                            stereo imaging. Each box delivers a matching 40-watt output, perfectly tuned for desktop or
+                            bookshelf placement in high-fidelity setups.</p>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-6">
+                                <h6 class="text-primary text-uppercase small tracking-widest mb-2">Power Source</h6>
+                                <p class="fw-bold mb-0">80W Total (40W x2)</p>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="text-primary text-uppercase small tracking-widest mb-2">Configuration</h6>
+                                <p class="fw-bold mb-0">Stereo Pair (L + R)</p>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="text-primary text-uppercase small tracking-widest mb-2">Acoustics</h6>
+                                <p class="fw-bold mb-0">Reference Satellite</p>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="text-primary text-uppercase small tracking-widest mb-2">Variations</h6>
+                                <p class="fw-bold mb-0">5 Premium Finishes</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-4">
+                            <div>
+                                <span class="text-secondary small d-block opacity-50 mb-1">Pricing Information</span>
+                                <span class="fs-4 fw-bold text-white">Coming Soon</span>
+                            </div>
+                            <button class="btn btn-primary btn-lg px-5 py-3 flex-grow-1">Notify Me</button>
                         </div>
                     </div>
                 </div>
@@ -140,16 +211,16 @@
             }
         });
 
-        function changeImage(thumbnail) {
-            const mainImg = document.getElementById('main-speaker-image');
+        function changeGalleryImage(thumbnail, mainImgId, thumbClassName) {
+            const mainImg = document.getElementById(mainImgId);
             mainImg.style.opacity = '0';
             setTimeout(() => {
                 mainImg.src = thumbnail.src;
                 mainImg.style.opacity = '1';
             }, 200);
 
-            // Reset all thumbnails
-            document.querySelectorAll('.thumbnail-img').forEach(img => {
+            // Reset all thumbnails in this gallery
+            document.querySelectorAll('.' + thumbClassName).forEach(img => {
                 img.classList.add('opacity-50');
                 img.classList.remove('border', 'border-2', 'border-primary');
             });
