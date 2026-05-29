@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+<div class="container py-5 mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="glass rounded-4 p-5 ultra-fade-in shadow-lg">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-gradient mb-2">{% trans "Welcome Back" %}</h2>
+                    <p class="text-secondary small">{% trans "Sign in to your account to continue" %}</p>
+                </div>
+
+                <form class="login" method="POST" action="{% url 'account_login' %}" novalidate>
+                    {% csrf_token %}
+                    
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger bg-transparent border-danger border-opacity-25 text-danger small mb-4 rounded-3">
+                            {% for error in form.non_field_errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <div class="mb-4">
+                        <label class="form-label text-secondary small text-uppercase fw-bold">{% trans "Email" %}</label>
+                        {{ form.login }}
+                        {% if form.login.errors %}
+                            <div class="text-danger extra-small mt-1">{{ form.login.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label class="form-label text-secondary small text-uppercase fw-bold mb-0">{% trans "Password" %}</label>
+                            <a class="text-primary extra-small text-decoration-none" href="{% url 'account_reset_password' %}">{% trans "Forgot?" %}</a>
+                        </div>
+                        {{ form.password }}
+                        {% if form.password.errors %}
+                            <div class="text-danger extra-small mt-1">{{ form.password.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+
+                    <div class="form-check mb-4">
+                        {{ form.remember }}
+                        <label class="form-check-label text-secondary small" for="{{ form.remember.id_for_label }}">
+                            {% trans "Remember me" %}
+                        </label>
+                    </div>
+
+                    <div class="d-grid gap-3">
+                        <button class="primaryAction btn btn-primary btn-lg py-3 rounded-3" type="submit">{% trans "Sign In" %}</button>
+                        <p class="text-center text-secondary small mt-3 mb-0">
+                            {% trans "Don't have an account?" %} 
+                            <a href="{{ signup_url }}" class="text-primary fw-bold text-decoration-none">{% trans "Sign Up" %}</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_head %}
+<style>
+    .form-control, input[type="text"], input[type="email"], input[type="password"] {
+        display: block;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 0.9rem 1.4rem;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+    .form-control:focus, input:focus {
+        background-color: rgba(255, 255, 255, 0.07);
+        border-color: var(--bs-primary);
+        color: white;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+        outline: none;
+    }
+    .extra-small {
+        font-size: 0.75rem;
+    }
+    .form-label {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+        opacity: 0.8;
+    }
+    input[type="checkbox"] {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 1.1rem;
+        height: 1.1rem;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+    }
+    .btn-primary {
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load account %}
+
+{% block title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block content %}
+<div class="container py-5 mt-5 text-center">
+    <div class="glass rounded-4 p-5 ultra-fade-in mx-auto" style="max-width: 600px;">
+        <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-envelope-check-fill text-primary" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm5.436-1.133L16 11.801V4.697zM10.115 7.93l.364.223-1.047 1.047a.75.75 0 0 1-1.06 0L7.325 8.153l.364-.224L8 8.122z"/>
+            </svg>
+        </div>
+        <h2 class="display-6 fw-bold text-gradient mb-3">{% trans "Verify Your E-mail" %}</h2>
+        <p class="text-secondary fs-5 mb-5">{% trans "We have sent an e-mail to you for verification. Please check your inbox and click the link to complete registration." %}</p>
+        
+        <div class="d-grid gap-3">
+            <a href="{% url 'shop:product_list' %}" class="btn btn-outline-light py-3">Back to Store</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

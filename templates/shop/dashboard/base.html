@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Admin Dashboard - Twt Electronics{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-5 mt-4">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-2">
+            <div class="glass rounded-4 p-4 sticky-top mb-4" style="top: 100px;">
+                <h5 class="fw-bold text-white mb-4">Dashboard</h5>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item">
+                        <a href="{% url 'shop:admin_dashboard' %}" class="nav-link rounded-3 {% if request.resolver_match.url_name == 'admin_dashboard' %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
+                            <i class="bi bi-speedometer2 me-2"></i> Overview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'shop:admin_products' %}" class="nav-link rounded-3 {% if 'products' in request.path %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
+                            <i class="bi bi-box me-2"></i> Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'shop:admin_categories' %}" class="nav-link rounded-3 {% if 'categories' in request.path %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
+                            <i class="bi bi-tags me-2"></i> Categories
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'shop:admin_orders' %}" class="nav-link rounded-3 {% if 'orders' in request.path %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
+                            <i class="bi bi-cart-check me-2"></i> Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'shop:admin_suppliers' %}" class="nav-link rounded-3 {% if 'suppliers' in request.path %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
+                            <i class="bi bi-truck me-2"></i> Suppliers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'shop:admin_purchases' %}" class="nav-link rounded-3 {% if 'purchases' in request.path %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
+                            <i class="bi bi-journal-text me-2"></i> Purchases
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'shop:admin_reports' %}" class="nav-link rounded-3 {% if 'reports' in request.path %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
+                            <i class="bi bi-graph-up me-2"></i> Reports
+                        </a>
+                    </li>
+                    <li class="nav-item mt-4 pt-4 border-top border-secondary border-opacity-25">
+                        <a href="{% url 'shop:product_list' %}" class="nav-link text-secondary p-3">
+                            <i class="bi bi-arrow-left me-2"></i> View Site
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-10">
+            {% block dashboard_content %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<style>
+    .nav-link {
+        transition: all 0.3s ease;
+    }
+    .nav-link:hover:not(.active) {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: white !important;
+    }
+    .card-stat {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: transform 0.3s ease;
+    }
+    .card-stat:hover {
+        transform: translateY(-5px);
+        border-color: var(--bs-primary);
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ product.name }} - Twt Electronics{% endblock %}
+
+{% block content %}
+<div class="container py-5 mt-5">
+    <div class="row align-items-center g-5">
+        <div class="col-lg-6 ultra-fade-in">
+            <div class="card p-0 border-0 bg-transparent overflow-visible">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.png' %}{% endif %}" alt="{{ product.name }}" id="main-product-image" class="img-fluid rounded-4 shadow-lg w-100">
+            </div>
+        </div>
+        <div class="col-lg-6 ultra-fade-in" style="animation-delay: 0.2s">
+            <div class="ps-lg-5">
+                <span class="badge badge-premium mb-3">{{ product.category.name }}</span>
+                <h2 class="display-5 fw-bold mb-4 text-gradient">{{ product.name }}</h2>
+                <div class="fs-5 text-secondary mb-5">
+                    {{ product.description|linebreaks }}
+                </div>
+
+                <div class="d-flex align-items-center gap-4 mb-5">
+                    <div>
+                        <span class="text-secondary small d-block opacity-50 mb-1">Pricing Information</span>
+                        {% if product.offer_price %}
+                            <span class="fs-4 fw-bold text-white">${{ product.offer_price }}</span>
+                            <span class="text-secondary text-decoration-line-through ms-2">${{ product.price }}</span>
+                        {% else %}
+                            <span class="fs-4 fw-bold text-white">${{ product.price }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <form action="{% url 'shop:cart_add' product.id %}" method="post" class="d-flex gap-3">
+                    {% csrf_token %}
+                    <div class="input-group" style="width: 150px;">
+                        {{ cart_product_form.quantity }}
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3 flex-grow-1">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

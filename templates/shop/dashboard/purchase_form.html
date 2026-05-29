@@ -1,0 +1,90 @@
+{% extends "shop/dashboard/base.html" %}
+
+{% block dashboard_content %}
+<div class="ultra-fade-in">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h2 class="display-6 fw-bold text-white mb-0">{{ action }} Stock Purchase</h2>
+        <a href="{% url 'shop:admin_purchases' %}" class="btn btn-outline-light">
+            <i class="bi bi-x-lg me-2"></i> Cancel
+        </a>
+    </div>
+
+    <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="glass rounded-4 p-4">
+                    <h5 class="fw-bold text-white mb-4">Purchase Info</h5>
+                    <div class="mb-4">
+                        <label class="form-label text-secondary small text-uppercase fw-bold">{{ form.supplier.label }}</label>
+                        {{ form.supplier }}
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label text-secondary small text-uppercase fw-bold">{{ form.total_amount.label }}</label>
+                        {{ form.total_amount }}
+                        <div class="extra-small text-secondary mt-1">Total paid for this supply batch.</div>
+                    </div>
+                    <div class="mb-0">
+                        <label class="form-label text-secondary small text-uppercase fw-bold">{{ form.notes.label }}</label>
+                        {{ form.notes }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="glass rounded-4 p-4">
+                    <h5 class="fw-bold text-white mb-4">Stock Items</h5>
+                    {{ formset.management_form }}
+                    <div class="table-responsive">
+                        <table class="table table-dark align-middle">
+                            <thead>
+                                <tr class="text-secondary small text-uppercase fw-bold">
+                                    <th>Product</th>
+                                    <th>Cost Price</th>
+                                    <th>Quantity</th>
+                                    <th>Delete?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for form in formset %}
+                                <tr>
+                                    <td>{{ form.product }}</td>
+                                    <td>{{ form.cost_price }}</td>
+                                    <td>{{ form.quantity }}</td>
+                                    <td class="text-center">{{ form.DELETE }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 text-end">
+            <button type="submit" class="btn btn-primary btn-lg px-5 py-3">Record Purchase & Update Stock</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    .form-control, .form-select, input[type="text"], input[type="number"], select, textarea {
+        display: block;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 0.7rem 1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    .form-control:focus, .form-select:focus, input:focus, select:focus {
+        background-color: rgba(255, 255, 255, 0.07);
+        border-color: var(--bs-primary);
+        color: white;
+        outline: none;
+    }
+    option { background: var(--bg-color); color: white; }
+    .table td { border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+</style>
+{% endblock %}
