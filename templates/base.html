@@ -13,13 +13,25 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass mx-lg-4 mt-lg-3 rounded-pill">
         <div class="container">
-            <a class="navbar-brand d-block text-center py-2" href="{% url 'shop:product_list' %}" style="min-width: 250px;">
-            <div class="d-flex align-items-center justify-content-center gap-2 mb-0">
-                <span style="font-weight: 800; color: white; font-size: 1.8rem; letter-spacing: -1px;">TwT</span>
-                <div style="width: 2px; height: 30px; background: #60a5fa; box-shadow: 0 0 10px #60a5fa;"></div>
-                <span style="font-weight: 400; color: #93c5fd; font-size: 1.6rem; letter-spacing: 2px; text-transform: uppercase;">Electronics</span>
+        <a class="navbar-brand d-block py-2" href="{% url 'shop:product_list' %}" style="min-width: 320px;">
+            <div class="d-flex align-items-center justify-content-center">
+                <!-- TwT -->
+                <span style="font-family: 'Outfit', sans-serif; font-weight: 800; color: white; font-size: 2.2rem; line-height: 1; letter-spacing: -1.5px;">TwT</span>
+                
+                <!-- Central Divider (Matching Image) -->
+                <div class="mx-3 d-flex align-items-center gap-1">
+                    <div style="width: 2px; height: 12px; background: #60a5fa; border-radius: 2px; opacity: 0.6;"></div>
+                    <div style="width: 2px; height: 20px; background: #60a5fa; border-radius: 2px; opacity: 0.8;"></div>
+                    <div style="width: 3px; height: 35px; background: #60a5fa; border-radius: 2px; box-shadow: 0 0 15px #60a5fa;"></div>
+                    <div style="width: 2px; height: 20px; background: #60a5fa; border-radius: 2px; opacity: 0.8;"></div>
+                    <div style="width: 2px; height: 12px; background: #60a5fa; border-radius: 2px; opacity: 0.6;"></div>
+                </div>
+
+                <!-- ELECTRONICS -->
+                <span style="font-family: 'Outfit', sans-serif; font-weight: 300; color: #93c5fd; font-size: 1.8rem; line-height: 1; letter-spacing: 4px; text-transform: uppercase;">Electronics</span>
             </div>
-            <div style="font-size: 0.65rem; color: rgba(255,255,255,0.8); letter-spacing: 3px; font-weight: 600; text-transform: uppercase; margin-top: -5px;">
+            <!-- Subtext -->
+            <div class="text-center" style="font-family: 'Outfit', sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.9); letter-spacing: 5px; font-weight: 500; text-transform: uppercase; margin-top: 2px;">
                 Precision Technology Engineering
             </div>
         </a>
