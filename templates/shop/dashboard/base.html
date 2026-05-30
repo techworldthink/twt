@@ -9,7 +9,16 @@
         <!-- Sidebar -->
         <div class="col-lg-2">
             <div class="glass rounded-4 p-4 sticky-top mb-4" style="top: 100px;">
-                <h5 class="fw-bold text-white mb-4">Dashboard</h5>
+                <div class="p-4 mb-3 text-center">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-0">
+                        <span style="font-weight: 800; color: white; font-size: 2rem; letter-spacing: -1px;">TwT</span>
+                        <div style="width: 3px; height: 35px; background: #60a5fa; box-shadow: 0 0 15px #60a5fa;"></div>
+                        <span style="font-weight: 400; color: #93c5fd; font-size: 1.8rem; letter-spacing: 2px; text-transform: uppercase;">Admin</span>
+                    </div>
+                    <div style="font-size: 0.7rem; color: rgba(255,255,255,0.8); letter-spacing: 4px; font-weight: 600; text-transform: uppercase; margin-top: -5px;">
+                        Control Systems
+                    </div>
+                </div>
                 <ul class="nav flex-column gap-2">
                     <li class="nav-item">
                         <a href="{% url 'shop:admin_dashboard' %}" class="nav-link rounded-3 {% if request.resolver_match.url_name == 'admin_dashboard' %}active bg-primary text-white{% else %}text-secondary{% endif %} p-3">
